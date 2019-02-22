@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Transaction Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:monitor  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:NIS support">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NemCHINA">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/NEM2-SDK User Case_Transaction/index.html">
+<meta property="og:site_name" content="NemCHINA">
+<meta property="og:description" content="Transaction Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:monitor  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:NIS support">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-22T04:49:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NemCHINA">
+<meta name="twitter:description" content="Transaction Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:monitor  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:NIS support">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/22/NEM2-SDK User Case_Transaction/">
+
+
+
+
+
+  <title> | NemCHINA</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">NemCHINA</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/NEM2-SDK User Case_Transaction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YANG">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NemCHINA">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T13:03:12+08:00">
+                2019-02-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Transaction"><a href="#Transaction" class="headerlink" title="Transaction"></a>Transaction</h1><ul>
+<li>Language:TypeScript and JavaScript SDK </li>
+<li>SDK-Version:v0.10.1-beta </li>
+<li>MODEL:monitor</li>
+</ul>
+<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><ul>
+<li>Finish the getting started section</li>
+<li>Text editor or IDE</li>
+<li>NEM2-SDK or CLI</li>
+<li>Description:NIS supports two different kind of accounts: normal accounts and multsig (short for: multi signature) accounts.</li>
+</ul>
+<h2 id="1-Cosign"><a href="#1-Cosign" class="headerlink" title="1. Cosign"></a>1. Cosign</h2><ul>
+<li>Description: Cosign an announce aggregate bonded transaction  </li>
+<li>Code sample:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Send a cosignature signed transaction of an already announced transaction</span></span><br><span class="line"><span class="comment"> * @param cosignatureSignedTransaction - Cosignature signed transaction</span></span><br><span class="line"><span class="comment"> * @returns Observable&lt;TransactionAnnounceResponse&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">public announceAggregateBondedCosignature(</span><br><span class="line">    cosignatureSignedTransaction: CosignatureSignedTransaction): Observable&lt;TransactionAnnounceResponse&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> observableFrom(<span class="keyword">this</span>.transactionRoutesApi.announceCosignatureTransaction(cosignatureSignedTransaction)).pipe(</span><br><span class="line">        map(<span class="function">(<span class="params">transactionAnnounceResponseDTO</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> TransactionAnnounceResponse(transactionAnnounceResponseDTO.message);</span><br><span class="line">        &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const payload = new CosignatureSignedTransaction(&apos;&apos;, &apos;&apos;, &apos;&apos;);</span><br><span class="line">            transactionHttp.announceAggregateBondedCosignature(payload)</span><br><span class="line">                .subscribe((transactionAnnounceResponse) =&gt; &#123;</span><br><span class="line">                    expect(transactionAnnounceResponse.message)</span><br><span class="line">                        .to.be.equal(&apos;packet 501 was pushed to the network via /transaction/cosignature&apos;);</span><br><span class="line">                    done();</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="2-info"><a href="#2-info" class="headerlink" title="2. info"></a>2. info</h2><ul>
+<li>Description : Fetch Transaction info   </li>
+<li>Code sample </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * Gets a transaction for a transactionId</span></span><br><span class="line"><span class="comment">  * @param transactionId - Transaction id or hash.</span></span><br><span class="line"><span class="comment">  * @returns Observable&lt;Transaction&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> public getTransaction(transactionId: string): Observable&lt;Transaction&gt; &#123;</span><br><span class="line">     <span class="keyword">return</span> observableFrom(<span class="keyword">this</span>.transactionRoutesApi.getTransaction(transactionId)).pipe(map(<span class="function">(<span class="params">transactionDTO</span>) =&gt;</span> &#123;</span><br><span class="line">         <span class="keyword">return</span> CreateTransactionFromDTO(transactionDTO);</span><br><span class="line">     &#125;));</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * Gets an array of transactions for different transaction ids</span></span><br><span class="line"><span class="comment">  * @param transactionIds - Array of transactions id and/or hash.</span></span><br><span class="line"><span class="comment">  * @returns Observable&lt;Transaction[]&gt;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> public getTransactions(transactionIds: string[]): Observable&lt;Transaction[]&gt; &#123;</span><br><span class="line">     <span class="keyword">const</span> transactionIdsBody = &#123;</span><br><span class="line">         transactionIds,</span><br><span class="line">     &#125;;</span><br><span class="line">     <span class="keyword">return</span> observableFrom(</span><br><span class="line">         <span class="keyword">this</span>.transactionRoutesApi.getTransactions(transactionIdsBody)).pipe(map(<span class="function">(<span class="params">transactionsDTO</span>) =&gt;</span> &#123;</span><br><span class="line">         <span class="keyword">return</span> transactionsDTO.map(<span class="function">(<span class="params">transactionDTO</span>) =&gt;</span> &#123;</span><br><span class="line">             <span class="keyword">return</span> CreateTransactionFromDTO(transactionDTO);</span><br><span class="line">         &#125;);</span><br><span class="line">     &#125;));</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="How-to-use-1"><a href="#How-to-use-1" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">transactionHttp.getTransaction(transactionHash)</span><br><span class="line">                .subscribe(<span class="function">(<span class="params">transaction</span>) =&gt;</span> &#123;</span><br><span class="line">                    expect(transaction.transactionInfo!.hash).to.be.equal(transactionHash);</span><br><span class="line">                    expect(transaction.transactionInfo!.id).to.be.equal(transactionId);</span><br><span class="line">                    done();</span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line">transactionHttp.getTransaction(transactionId)</span><br><span class="line">                .subscribe(<span class="function">(<span class="params">transaction</span>) =&gt;</span> &#123;</span><br><span class="line">                    expect(transaction.transactionInfo!.hash).to.be.equal(transactionHash);</span><br><span class="line">                    expect(transaction.transactionInfo!.id).to.be.equal(transactionId);</span><br><span class="line">                    done();</span><br><span class="line">                &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="3-Mosaic"><a href="#3-Mosaic" class="headerlink" title="3.Mosaic"></a>3.Mosaic</h2><ul>
+<li>Description : Mosaic creation transaction </li>
+<li>Code sample </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Create a mosaic creation transaction object</span></span><br><span class="line"><span class="comment"> * @param deadline - The deadline to include the transaction.</span></span><br><span class="line"><span class="comment"> * @param mosaicName - The mosaic name ex: xem.</span></span><br><span class="line"><span class="comment"> * @param namespaceName - The namespace where mosaic will be included ex: nem.</span></span><br><span class="line"><span class="comment"> * @param mosaicProperties - The mosaic properties.</span></span><br><span class="line"><span class="comment"> * @param networkType - The network type.</span></span><br><span class="line"><span class="comment"> * @returns &#123;MosaicDefinitionTransaction&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">static</span> create(deadline, mosaicName, namespaceName, mosaicProperties, networkType) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> MosaicDefinitionTransaction(networkType, <span class="number">2</span>, deadline, <span class="keyword">new</span> UInt64_1.UInt64([<span class="number">0</span>, <span class="number">0</span>]), <span class="keyword">new</span> NamespaceId_1.NamespaceId(namespaceName), <span class="keyword">new</span> MosaicId_1.MosaicId(nem2_library_1.mosaicId(namespaceName, mosaicName)), mosaicName, mosaicProperties);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="How-to-use-2"><a href="#How-to-use-2" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(</span><br><span class="line">                  Deadline.create(),</span><br><span class="line">                  &apos;test-mosaic-name-&apos; + Math.floor(Math.random() * 10000),</span><br><span class="line">                  namespaceName,</span><br><span class="line">                  MosaicProperties.create(&#123;</span><br><span class="line">                      supplyMutable: true,</span><br><span class="line">                      transferable: true,</span><br><span class="line">                      levyMutable: true,</span><br><span class="line">                      divisibility: 3,</span><br><span class="line">                      duration: UInt64.fromUint(1000),</span><br><span class="line">                  &#125;),</span><br><span class="line">                  NetworkType.MIJIN_TEST,</span><br><span class="line">              );</span><br><span class="line">              mosaicId = mosaicDefinitionTransaction.mosaicId;</span><br><span class="line">              const signedTransaction = mosaicDefinitionTransaction.signWith(account);</span><br><span class="line">              validateTransactionAnnounceCorrectly(account.address, done);</span><br><span class="line">              transactionHttp.announce(signedTransaction);</span><br></pre></td></tr></table></figure>
+<h2 id="4-Namespace"><a href="#4-Namespace" class="headerlink" title="4.Namespace"></a>4.Namespace</h2><ul>
+<li>Description: Register namespace transaction   </li>
+<li>Code sample </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Create a root namespace object</span></span><br><span class="line"><span class="comment">     * @param deadline - The deadline to include the transaction.</span></span><br><span class="line"><span class="comment">     * @param namespaceName - The namespace name.</span></span><br><span class="line"><span class="comment">     * @param duration - The duration of the namespace.</span></span><br><span class="line"><span class="comment">     * @param networkType - The network type.</span></span><br><span class="line"><span class="comment">     * @returns &#123;RegisterNamespaceTransaction&#125;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    public <span class="keyword">static</span> createRootNamespace(deadline: Deadline,</span><br><span class="line">                                      namespaceName: string,</span><br><span class="line">                                      duration: UInt64,</span><br><span class="line">                                      networkType: NetworkType): RegisterNamespaceTransaction &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RegisterNamespaceTransaction(networkType,</span><br><span class="line">            <span class="number">2</span>,</span><br><span class="line">            deadline,</span><br><span class="line">            <span class="keyword">new</span> UInt64([<span class="number">0</span>, <span class="number">0</span>]),</span><br><span class="line">            NamespaceType.RootNamespace,</span><br><span class="line">            namespaceName,</span><br><span class="line">            <span class="keyword">new</span> NamespaceId(namespaceName),</span><br><span class="line">            duration,</span><br><span class="line">        );</span><br><span class="line">    &#125;               </span><br><span class="line"><span class="string">``</span><span class="string">`       </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### **How to use**</span></span><br></pre></td></tr></table></figure>
+<p>namespaceName = ‘root-test-namespace-‘ + Math.floor(Math.random() * 10000);<br>                const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(<br>                    Deadline.create(),<br>                    namespaceName,<br>                    UInt64.fromUint(1000),<br>                    NetworkType.MIJIN_TEST,<br>                );<br>                const signedTransaction = registerNamespaceTransaction.signWith(account);<br>                validateTransactionAnnounceCorrectly(account.address, done);<br>                transactionHttp.announce(signedTransaction);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">## 5.pullfunds</span><br><span class="line"></span><br><span class="line">- Description:Create a pull transaction requesting xem to an account,LockFundsTransaction</span><br><span class="line">- Code sample:</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line"></span><br><span class="line"> /**</span><br><span class="line">     * Create a Lock funds transaction object</span><br><span class="line">     * @param deadline - The deadline to include the transaction.</span><br><span class="line">     * @param mosaic - The locked mosaic.</span><br><span class="line">     * @param duration - The funds lock duration.</span><br><span class="line">     * @param signedTransaction - The signed transaction for which funds are locked.</span><br><span class="line">     * @param networkType - The network type.</span><br><span class="line">     */</span><br><span class="line">    public static create(deadline: Deadline,</span><br><span class="line">                         mosaic: Mosaic,</span><br><span class="line">                         duration: UInt64,</span><br><span class="line">                         signedTransaction: SignedTransaction,</span><br><span class="line">                         networkType: NetworkType): LockFundsTransaction &#123;</span><br><span class="line">        return new LockFundsTransaction(</span><br><span class="line">            networkType,</span><br><span class="line">            3,</span><br><span class="line">            deadline,</span><br><span class="line">            UInt64.fromUint(0),</span><br><span class="line">            mosaic,</span><br><span class="line">            duration,</span><br><span class="line">            signedTransaction,</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="How-to-use-3"><a href="#How-to-use-3" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const aggregateTransaction = AggregateTransaction.createBonded(</span><br><span class="line">                    Deadline.create(),</span><br><span class="line">                    [],</span><br><span class="line">                    NetworkType.MIJIN_TEST,</span><br><span class="line">                    [],</span><br><span class="line">                );</span><br><span class="line">                const signedTransaction = account.sign(aggregateTransaction);</span><br><span class="line"></span><br><span class="line">                const lockFundsTransaction = LockFundsTransaction.create(Deadline.create(),</span><br><span class="line">                    XEM.createRelative(10),</span><br><span class="line">                    UInt64.fromUint(10000),</span><br><span class="line">                    signedTransaction,</span><br><span class="line">                    NetworkType.MIJIN_TEST);</span><br><span class="line"></span><br><span class="line">                validateTransactionAnnounceCorrectly(account.address, done);</span><br><span class="line">                transactionHttp.announce(lockFundsTransaction.signWith(account));</span><br></pre></td></tr></table></figure>
+<h2 id="6-transfer"><a href="#6-transfer" class="headerlink" title="6.transfer"></a>6.transfer</h2><ul>
+<li><p>Description: Send transfer transaction  </p>
+</li>
+<li><p>Code sample </p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Gets an array of confirmed transactions for which an account is signer or receiver.</span></span><br><span class="line"><span class="comment"> * @param publicAccount - User public account</span></span><br><span class="line"><span class="comment"> * @param queryParams - (Optional) Query params</span></span><br><span class="line"><span class="comment"> * @returns Observable&lt;Transaction[]&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">public transactions(publicAccount: PublicAccount,</span><br><span class="line">                    queryParams?: QueryParams): Observable&lt;Transaction[]&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> observableFrom(</span><br><span class="line">        <span class="keyword">this</span>.accountRoutesApi.transactions(publicAccount.publicKey, queryParams != <span class="literal">null</span> ? queryParams : &#123;&#125;)).pipe(</span><br><span class="line">        map(<span class="function">(<span class="params">transactionsDTO</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> transactionsDTO.map(<span class="function">(<span class="params">transactionDTO</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> CreateTransactionFromDTO(transactionDTO);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="How-to-use-4"><a href="#How-to-use-4" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">it(&apos;should call transactions successfully&apos;, (done) =&gt; &#123;</span><br><span class="line">            accountHttp.transactions(publicAccount).subscribe((transactions) =&gt; &#123;</span><br><span class="line">                expect(transactions.length).to.be.greaterThan(0);</span><br><span class="line">                done();</span><br><span class="line">            &#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/22/NEM2-SDK User Case_profile/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/22/NEM2-SDK User Case_Account/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YANG</p>
+              <p class="site-description motion-element" itemprop="description">nem2_sdk文档描述</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Transaction"><span class="nav-number">1.</span> <span class="nav-text">Transaction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisites"><span class="nav-number">1.1.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Cosign"><span class="nav-number">1.2.</span> <span class="nav-text">1. Cosign</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use"><span class="nav-number">1.2.1.</span> <span class="nav-text">How to use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-info"><span class="nav-number">1.3.</span> <span class="nav-text">2. info</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">How to use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Mosaic"><span class="nav-number">1.4.</span> <span class="nav-text">3.Mosaic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">How to use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Namespace"><span class="nav-number">1.5.</span> <span class="nav-text">4.Namespace</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use-3"><span class="nav-number">1.5.1.</span> <span class="nav-text">How to use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-transfer"><span class="nav-number">1.6.</span> <span class="nav-text">6.transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use-4"><span class="nav-number">1.6.1.</span> <span class="nav-text">How to use</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YANG</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>

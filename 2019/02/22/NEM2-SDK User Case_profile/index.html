@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="nem2_sdk文档描述">
+<meta name="description" content="Profile Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:ACOUNT  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:profile manageme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好啊">
-<meta property="og:url" content="http://yoursite.com/2019/02/21/你好啊/index.html">
+<meta property="og:title" content="NemCHINA">
+<meta property="og:url" content="http://yoursite.com/2019/02/22/NEM2-SDK User Case_profile/index.html">
 <meta property="og:site_name" content="NemCHINA">
-<meta property="og:description" content="nem2_sdk文档描述">
+<meta property="og:description" content="Profile Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:ACOUNT  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:profile manageme">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-21T09:32:09.209Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/528413-00b283764729980d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/528413-32dc16fa6749d7da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-02-22T04:49:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好啊">
-<meta name="twitter:description" content="nem2_sdk文档描述">
+<meta name="twitter:title" content="NemCHINA">
+<meta name="twitter:description" content="Profile Language:TypeScript and JavaScript SDK  SDK-Version:v0.10.1-beta  MODEL:ACOUNT  Prerequisites Finish the getting started section Text editor or IDE NEM2-SDK or CLI Description:profile manageme">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/528413-00b283764729980d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/21/你好啊/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/22/NEM2-SDK User Case_profile/">
 
 
 
 
 
-  <title>你好啊 | NemCHINA</title>
+  <title> | NemCHINA</title>
   
 
 
@@ -282,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/21/你好啊/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/22/NEM2-SDK User Case_profile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YANG">
@@ -299,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好啊</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -311,8 +314,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T17:32:09+08:00">
-                2019-02-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T13:03:12+08:00">
+                2019-02-22
               </time>
             
 
@@ -349,7 +352,32 @@
       
 
       
-        
+        <h1 id="Profile"><a href="#Profile" class="headerlink" title="Profile"></a>Profile</h1><ul>
+<li>Language:TypeScript and JavaScript SDK </li>
+<li>SDK-Version:v0.10.1-beta </li>
+<li>MODEL:ACOUNT</li>
+</ul>
+<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><ul>
+<li>Finish the getting started section</li>
+<li>Text editor or IDE</li>
+<li>NEM2-SDK or CLI</li>
+<li>Description:profile management</li>
+</ul>
+<h2 id="1-create-Configure-an-account"><a href="#1-create-Configure-an-account" class="headerlink" title="1. create - Configure an account"></a><strong>1. create - Configure an account</strong></h2><ul>
+<li>Description: Creates a new profile.</li>
+<li>Code sample:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Options</span><br><span class="line"></span><br><span class="line">-p, --privatekey &lt;privatekey&gt; - Private key</span><br><span class="line">-n, --network &lt;network&gt;       - Network Type: MAIN_NET, TEST_NET, MIJIN, MIJIN_TEST</span><br><span class="line">-u, --url &lt;url&gt;               - NEM2 Node URL. Example: http:<span class="comment">//localhost:3000</span></span><br><span class="line">--profile &lt;profile&gt;           - (Optional) profile name, <span class="keyword">if</span> not private key will be stored <span class="keyword">as</span> <span class="keyword">default</span></span><br></pre></td></tr></table></figure>
+<h3 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a><strong>How to use</strong></h3><p>Bash code:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nem2-cli profile create -p 206CE7E4B16B48430FD2C216E4BB105564B21E21DEE196267B4B33C54F1023FC -n MIJIN_TEST -u http://localhost:3000</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/528413-00b283764729980d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<h2 id="2-list-Configure-an-account"><a href="#2-list-Configure-an-account" class="headerlink" title="2.list   - Configure an account"></a>2.list   - Configure an account</h2><ul>
+<li>Description : Gets the list of stored accounts.</li>
+<li>Code sample </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nem2-cli profile list</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/528413-32dc16fa6749d7da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+
       
     </div>
     
@@ -373,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/21/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/02/22/NEM2-SDK User Case_Monitor/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -383,7 +411,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/22/NEM2-SDK User Case_Monitor/" rel="prev" title>
+              <a href="/2019/02/22/NEM2-SDK User Case_Transaction/" rel="prev" title>
                  <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -437,8 +465,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -480,6 +517,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Profile"><span class="nav-number">1.</span> <span class="nav-text">Profile</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisites"><span class="nav-number">1.1.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-create-Configure-an-account"><span class="nav-number">1.2.</span> <span class="nav-text">1. create - Configure an account</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-use"><span class="nav-number">1.2.1.</span> <span class="nav-text">How to use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-list-Configure-an-account"><span class="nav-number">1.3.</span> <span class="nav-text">2.list   - Configure an account</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
